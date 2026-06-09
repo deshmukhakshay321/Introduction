@@ -4,7 +4,7 @@
 name: Greetings on variable day
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
   env:
     DAYof: Monday
 jobs:
