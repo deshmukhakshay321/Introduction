@@ -4,17 +4,19 @@ name: Greetings on variable day
 on:
   workflow_dispatch:
 
-env:
-  DAYof: Monday
 
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
-    env:
-      greeting: Hello
+
 
     steps:
-      - name: "Say Hello Mona it's Monday"
-        run: echo "$greeting $name. Today is $DAYof"
-        env:
-          name: Mona
+      - name: set the value
+        id: step_one
+        run: |
+          echo "action_state=yellow" >> "$GITHUB_ENV"
+
+      - name: use the value
+        id: step_two
+        run: |
+          printf '%s\n' "$action_state" # This will output 'yellow'
