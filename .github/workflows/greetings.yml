@@ -5,15 +5,15 @@ name: Greetings on variable day
 
 on:
   workflow_dispatch:
-  env:
-    DAYof: Monday
+env:
+  DAYof: Monday
 jobs:
   greeting_job:
-  runs-on: ubuntu-latest 
-  env: 
-    greeting: Hello
-  steps:
-    -name : "Say Hello Mona it's Monday"
-    run: echo "$greeeting $name. Today is $DAYof "
-    env:
-      name: Mona
+    runs-on: ubuntu-latest 
+    env: 
+      greeting: Hello
+    steps:
+      -name : "Say Hello Mona it's Monday"
+      run: echo "$greeeting $name. Today is $DAYof "
+      env:
+        name: Mona
