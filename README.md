@@ -5,7 +5,7 @@ A simple Node.js quiz application for learning and testing knowledge about Node.
 ## Features
 
 - Interactive command-line quiz interface
-- Multiple choice questions
+- Multiple choice questions 
 - Immediate feedback on answers
 - Score tracking and percentage calculation
 - Clear and simple code structure
